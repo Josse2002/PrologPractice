@@ -1,0 +1,55 @@
+?- rectangulo(5, 3, R).
+R = [15, 16].
+
+?- par_impar(7).
+Impar
+
+?- tabla_multiplicar(4).
+4 x 1 = 4
+...
+4 x 10 = 40
+
+?- mayor(10, 20, M).
+M = 20.
+
+?- categoria_edad(25).
+Adulto
+
+?- aprobo(5).
+Reprobado
+
+?- es_hermano(ana, pedro).
+true.
+
+?- comparacion(5, 5.0).
+= : 5 y 5.0 unifican
+\== : 5 y 5.0 son distintos
+
+?- color_equipo(azul).
+Equipo B
+
+?- distancia(0,0,3,4,D).
+D = 5.0.
+
+?- grados_a_radianes(180,R).
+R = 3.141592653589793.
+
+?- analisis(8, 4, R).
+R = [6.0, 8, 4].
+
+?- estadisticas(-3.7).
+abs(-3.7) = 3.7
+round(-3.7) = -4
+floor(-3.7) = -4
+ceiling(-3.7) = -3
+
+?- calculadora(dividir, 10, 2, R).
+R = 5.0.
+
+?- hipotenusa(3, 4, H).
+H = 5.0.
+
+?- notas_info([10, 7, 8, 9], Max, Min, Prom).
+Max = 10,
+Min = 7,
+Prom = 8.5.

@@ -1,0 +1,56 @@
+¿Quiénes son dioses y quiénes son mortales?
+?- dios(X).
+X = zeus ;
+X = poseidon ;
+X = hades ;
+...
+
+?- mortal(X).
+X = perseo ;
+X = heracles ;
+X = medusa.
+
+¿Quiénes son héroes?
+?- heroe(X).
+X = perseo ;
+X = heracles.
+
+¿Quién es hijo de Zeus?
+?- hijo_de(H, zeus).
+H = perseo ;
+H = heracles.
+
+¿Qué héroes enfrentan enemigos y cuáles son?
+?- heroe(H), enfrenta(H, E).
+H = perseo, E = medusa ;
+H = heracles, E = leon_de_nemea ;
+H = heracles, E = hidra_de_lerna.
+
+¿Qué dios ayuda a Perseo y a Heracles?
+?- ayuda_a(D, perseo).
+D = atenea ;
+D = hermes.
+
+?- ayuda_a(D, heracles).
+D = atenea.
+
+¿Qué objetos poseen los héroes?
+?- heroe(H), posee(H, O).
+H = perseo, O = espada_magica ;
+H = heracles, O = fuerza_sobrehumana.
+
+¿Dónde habita Zeus, Hades y Poseidón?
+?- lugar(zeus, L).
+L = olimpo.
+
+?- lugar(hades, L).
+L = inframundo.
+
+?- lugar(poseidon, L).
+L = mar.
+
+¿Qué relaciones de enfrentamiento existen entre héroes y enemigos?
+?- enfrenta(H, E), heroe(H).
+H = perseo, E = medusa ;
+H = heracles, E = leon_de_nemea ;
+H = heracles, E = hidra_de_lerna.
