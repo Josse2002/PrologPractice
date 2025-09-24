@@ -4,7 +4,7 @@
 
 % Ejercicio 1: Cálculo de área y perímetro de un rectángulo
 % rectangulo(Base, Altura, [Area, Perimetro]).
-rectangulo(B, H, [A, P]) :-
+rectangulo(B, H, area_perimetro(A, P)) :-
     A is B * H,
     P is 2 * (B + H).
 
@@ -16,9 +16,11 @@ par_impar(N) :-
 tabla_multiplicar(N) :-
     between(1, 10, I),
     R is N * I,
-    format("~w x ~w = ~w~n", [N, I, R]),
-    fail.
-tabla_multiplicar(_).   % para cortar el backtracking
+    write(N),write(' x '),write(I),write(' = '),write(R),nl,
+    fail. % para cortar el backtracking
+tabla_multiplicar(_).
+%tabla_multiplicar().   
+%format("~w x ~w = ~w~n", [N, I, R]),
 
 
 % ================================
@@ -27,6 +29,9 @@ tabla_multiplicar(_).   % para cortar el backtracking
 
 % Ejercicio 4: Mayor de dos números
 mayor(A, B, M) :- (A >= B -> M = A ; M = B).
+mayor_max(A,B,R) :- R is max(A,B).
+
+menor_min(A,B,R) :- R is min(A,B).
 
 % Ejercicio 5: Rango de edad
 categoria_edad(E) :-
@@ -59,8 +64,8 @@ comparacion(X, Y) :-
     (X \== Y  -> format("\\== : ~w y ~w son distintos~n", [X, Y]) ; true).
 
 % Ejercicio 9: Juego de colores
-color_equipo(rojo)   :- writeln('Equipo A').
-color_equipo(azul)   :- writeln('Equipo B').
+color_equipo(rojo)   :- writeln('Equipo A'), !. % corta backtracking
+color_equipo(azul)   :- writeln('Equipo B'), fail. % fuerza backtracking
 color_equipo(verde)  :- writeln('Equipo C').
 color_equipo(_)      :- writeln('Color desconocido').
 
